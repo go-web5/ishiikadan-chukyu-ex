@@ -1,0 +1,527 @@
+//*------------------*
+//*  トップ
+//*------------------*
+.top {
+  width: 100%;
+  height: 1079px;
+  position: relative;
+  vertical-align: bottom;
+
+  img {
+    height: 1079px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  &__copy {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    @include rem(34);
+    color: $color-white;
+    position: absolute;
+    top: 33%;
+    right: 25%;
+    letter-spacing: 0.2em;
+    line-height: 2.5;
+    -webkit-text-shadow: 0px -3px 4px rgba(0, 0, 0, 0.7);
+            text-shadow: 0px -3px 4px rgba(0, 0, 0, 0.7);
+  }
+}
+
+// スライダー自動再生が止まらないようにする
+.slide_target {
+  pointer-events: none;
+}
+
+// デフォルトボタン消す
+.slick-arrow {
+  display: none !important;
+}
+
+// SLICK ズームイン
+.slide-animation{
+  animation: fadezoom 25s 0s forwards;
+}
+@keyframes fadezoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+//*------------------*
+//*  コンセプト（縦書きメッセージ）
+//*------------------*
+.concept {
+  width: 100%;
+  padding-top: 149px;
+  height: 681px;
+  background-image: url(../images/bg1-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__inner {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    -webkit-text-orientation: upright;
+    text-orientation: upright;
+    text-align: left;
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0 3% 0 7.4%;
+    box-sizing: content-box;
+
+  }
+
+  &__ttl {
+    @include rem(28);
+    font-weight: normal;
+    line-height: 2.2;
+    letter-spacing: .9rem;
+    text-indent: -3em;
+  }
+  
+  p {
+    margin-right: 95px;
+    line-height: 2.4;
+  }
+  &__text {
+    @include rem(16);
+    line-height: 1.375;
+    letter-spacing: .35rem;
+  }
+  &__sign {
+    @include rem(22);
+    text-align: right;
+    padding-bottom: .5em;
+    letter-spacing: .47em;
+  }
+}
+
+//*------------------*
+//*  詳細
+//*------------------*
+.detail {
+  padding-top: 106px;
+  padding-bottom: 78px;
+
+  &__box {
+    padding: 22px 4% 0 7%;
+  }
+
+  &__ttl {
+    @include rem(36);
+    width: 13em;
+    font-weight: normal;
+    padding-bottom: 55px;
+    line-height: 1.72;
+  }
+  &__text {
+    line-height: 2;
+    width: 27em;
+  }
+  &__btn {
+    margin-top: 65px;
+  }
+
+  img {
+    max-width: 1050px;
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  p, a {
+    @include rem(16);
+  }
+  a {
+    display: block;
+  }
+
+  &__item-1,
+  &__item-2,
+  &__item-3 {
+    display: flex;
+  }
+
+  &__item-1 {
+    margin-bottom: 122px;
+  }
+
+  &__item-2 {
+    flex-direction: row-reverse;
+    margin-bottom: 122px;
+
+    & > .detail__box {
+      padding: 43px 0% 0 11%;
+    }
+    .detail__btn {
+      margin-top: 35px;
+    }
+  }
+}
+
+//*------------------*
+//* おすすめご宿泊プラン
+//*------------------*
+.plan {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 144px;
+  background-image: url(../images/bg02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__heading {
+    padding-bottom: 55px;
+    text-align: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    h2 {
+      @include rem(36);
+      font-weight: normal;
+      margin-top: 8px;
+    }
+  }
+
+  // インナー
+  &__inner {
+    width: 100%;
+    max-width: 1181px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  &__item-box {
+    width: 100%;
+    max-width: 331px;
+    height: auto;
+    text-align: left;
+
+    img {
+      width: 100%;
+      max-width: 331px;
+      height: auto;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 94px;
+    }
+  }
+
+  &__item-ttl {
+    @include rem(20);
+    margin-top: 25px;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+
+  &__item-text {
+    @include rem(16);
+    margin-top: 20px;
+    line-height: 2;
+  }
+}
+
+//*------------------*
+//*  お知らせ
+//*------------------*
+.news {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  width: 100%;
+
+  &__heading {
+    margin-bottom: 43px;
+    text-align: center;
+  }
+
+  &__ttl {
+    @include rem(36);
+    font-weight: normal;
+    margin-top: 8px;
+  }
+
+  &__list {
+    margin-top: 35px;
+
+    li {
+      display: inline-block;
+      &:first-of-type {
+          text-decoration: underline;
+        }
+
+      a {
+        color: $color-black;
+      }
+    }
+
+    li + li {
+      margin-left: 53px;
+    }
+  }
+
+  &__item {
+    margin-bottom: -20px;
+  }
+
+  // フレックスインナー
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: calc(1186px + 2% * 2);
+    padding: 0 2%;
+    margin: 0 auto;
+  }
+
+  // フレックスアイテム
+  article {
+    margin-bottom: 20px;
+    width: auto;
+    flex-basis: calc(50% - 4% / 2);
+
+    &:nth-child(odd) {
+      margin-right: 4%;
+    }
+
+    a {
+      color: $color-black;
+      display: flex;
+      width: 100%;
+      height: 130px;
+      background-color: $color-bg-grey;
+      padding: 15px 39px 15px 10px;
+    }
+
+    img {
+      width: 103px;
+      height: auto;
+    }
+  }
+
+  &__item-text {
+    display: inline-block;
+    padding-left: 30px;
+  }
+  time {
+    @include rem(14);
+  }
+
+  &__item-ttl {
+    line-height: 2;
+  }
+}
+
+//*------------------*
+//*  アクセス
+//*------------------*
+.access {
+  padding-top: 60px;
+  padding-bottom: 110px;
+  background-image: url(../images/bg1-2.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+
+  &__heading {
+    margin-bottom: 73px;
+    text-align: center;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    h2 {
+      @include rem(36);
+      font-weight: normal;
+      margin-top: 8px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    max-width: 1307px;
+    padding-left: 8.5%;
+    padding-right: 2%;
+    box-sizing: content-box;
+    margin: 0 auto 69px;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      max-width: 656px;
+      height: auto;
+      vertical-align: bottom;
+    }
+  }
+
+  &__text {
+    padding-top: 15px;
+    padding-left: 83px;
+
+    h6 {
+      @include rem(16);
+      padding-bottom: 13px;
+    }
+
+    p {
+      line-height: 2;
+      padding-bottom: 13px;
+
+      &:last-of-type {
+        max-width: 36em;
+        width: 100%;
+      }
+    }
+  }
+
+  &__map {
+    text-align: center;
+  }
+}
+
+
+//*------------------*
+//*  予約モーダル
+//*------------------*
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10; /*サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30,30,30,0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 100%;
+  max-width: 550px;
+  min-height: 600px;
+  height: auto;
+  padding: 23px 0;
+  background-color: #fff;
+}
+
+.modal-ttl {
+  @include rem(20);
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 24px;
+  padding: 0 20%;
+}
+
+.modal__form {
+  padding: 0 4%;
+  margin: 0 auto;
+}
+.modalContents {
+  border-top: 1px solid $color-box-border;
+  padding-top: 31px;
+  max-width: 430px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+// 閉じるボタン
+.closeModal {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.3rem;
+  cursor: pointer;
+  width: 18px;
+  height: auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.modal__form-inner input,
+.modal__form-inner select,
+.modal__form-plan-sub,
+.alert {
+  @include rem(14);
+}
+
+.modal__form-inner label{
+  display: block;
+  @include rem(16);
+  margin-bottom: 10px;
+}
+
+.modal__form-name,
+.modal__form-mail,
+.modal__form-plan {
+  margin-bottom: 8px;
+}
+
+.modal__form-inner input,
+.modal__form-inner select {
+  width: 100%;
+  max-width: 429px;
+  min-height: 32px;
+  border: 1px solid $color-box-border;
+  padding: 8px 10px;
+}
+
+.modal__form-time {
+  margin-bottom: 64px;
+}
+
+select:invalid {
+  color: $color-placeholder;
+}
+.modal__form-plan-choice {
+  option {
+    color: $color-black;
+  }
+  option:first-of-type {
+    display: none;
+  }
+}
+
+.modal__form-btn {
+  width: 198px;
+  margin: 0 auto;
+
+  .submit-btn {
+    @include rem(16);
+    max-width: 100%;
+    text-align: center;
+    color: $color-black;
+    border: 1px solid $color-black;
+    line-height: 38px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+.alert {
+  color: $color-alert;
+  margin-bottom: 3px;
+}

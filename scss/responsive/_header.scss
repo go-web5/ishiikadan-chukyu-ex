@@ -1,0 +1,111 @@
+//*------------------*
+//*  ヘッダー＆トップ
+//*------------------*
+
+.header {
+  &__inner {
+    @include md {
+      height: 60px;
+      padding-right: 2%;
+      padding-left: 2%;
+    }
+  }
+  &__logo a span {
+    @include md {
+      @include rem(26);
+      padding-left: 10px;
+    }
+    @include ss {
+      @include rem(21);
+      padding-left: 5px;
+      letter-spacing: 0.2rem;
+    }
+  }
+  &__logo a img {
+    @include md {
+      width: 35px;
+    }
+    @include ss {
+      width: 30px;
+    }
+  }
+  &__nav-list {
+    @include md {
+      display: none;
+    }
+  }
+
+  &__btn .contact-btn {
+    @include md {
+      height: 35px;
+      line-height: 35px;
+      padding: 0 12px;
+      top: 13px;
+      right: 60px;
+    }
+    @include ss {
+      padding: 0 10px;
+    }
+  }
+}
+
+
+//*---------------------*
+//*  ハンバーガーメニュー
+//*---------------------*
+
+@include md {
+  // ハンバーガーメニュー
+  .hamburger__line {
+    background-color: $color-white;
+  }
+
+  //  ハンバーガーアイコン
+  .button {
+    display: inline-block;
+  }
+
+  // ハンバーガーをクリックした時のナブメニュー背景
+  .header__nav-wrapper {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $color-white;
+    top: 60px;
+    left: 0;
+    margin-left: 0px;
+    z-index: 2; 
+  }
+
+  // ハンバーガーをクリックした時のナブメニュー背景
+  .header__nav{
+    width: 100%;
+    height: 100%;
+  }
+  .header__nav .header__nav-list{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-65%);
+    text-align: center;
+  }
+  .header__nav li{
+    margin-right: 0;
+    margin-bottom: 40px;
+    a{
+      color: $color-black;
+      @include rem(20);
+    }
+  }
+  .header__nav.close a {
+    color: $color-black;
+  }
+}
+
+@include ss {
+  .hamburger {
+    top: 10px;
+  }
+}

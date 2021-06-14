@@ -1,0 +1,183 @@
+//*------------------*
+//*  トップ
+//*------------------*
+.spa {
+  padding-top: 80px;
+  width: 100%;
+
+  &__top {
+    width: 100%;
+    height: 500px;
+    
+    background-image: url(../images/onsen-header.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__ttl {
+    color: $color-white;
+    @include rem(34);
+  }
+}
+
+// ルームコンテンツコンテナ
+.spa-type {
+  width: 100%;
+  padding-bottom: 96.5px;
+
+  &__inner {
+    width: 100%;
+    max-width: calc(1180px + 4% * 2);
+    padding: 0 4%;
+    margin: 0 auto;
+  }
+}
+
+// ルームコンテンツのフォントサイズ
+.spa__contents {
+  h4 {
+    @include rem(24);
+  }
+  p {
+    @include rem(16);
+  }
+  li {
+    @include rem(14);
+  }
+}
+
+// spa-1
+.spa-1 {
+  margin-bottom: 82px;
+
+  &__container {
+    position: relative;
+    padding-top: 57px;
+  }
+  &__image {
+    max-width: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+    }
+  }
+
+  &__content {
+    max-width: 68.9%;
+    min-height: 381px;
+    height: auto;
+    background-image: url(../images/bg1-3.jpg);
+    margin-left: auto;
+    padding: 53px 0;
+    background-position: center;
+    background-size: cover;
+
+    &-inner {
+      margin: 0 8% 0 29%;
+      width: 63%;
+    }
+  }
+
+  &__ttl {
+    margin-bottom: 38px;
+
+  }
+  &__text {
+    margin-bottom: 40px;
+    line-height: 2;
+  }
+}
+
+// spa-2
+.spa-2 {
+  margin-bottom: 82px;
+
+  &__container {
+    position: relative;
+    padding-top: 57px;
+  }
+  &__image {
+    max-width: 45%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: bottom;
+      
+    }
+  }
+
+  &__content {
+    max-width: 68.9%;
+    min-height: 381px;
+    height: auto;
+    background-image: url(../images/bg1-3.jpg);
+    margin-right: auto;
+    padding: 53px 0;
+    background-position: center;
+    background-size: cover;
+
+    &-inner {
+      margin: 0 27% 0 6%;
+      width: 67%;
+    }
+  }
+
+  &__ttl {
+    margin-bottom: 38px;
+
+  }
+  &__text {
+    margin-bottom: 40px;
+    line-height: 2;
+  }
+}
+
+.spa-detail {
+  padding-top: 89px;
+  padding-bottom: 74px;
+  border-top: 1px solid $color-box-border;
+  border-bottom: 1px solid $color-box-border;
+
+  &__ttl {
+    @include rem(26);
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 44px;
+  }
+  &__box {
+    width: 100%;
+    max-width: 74.6%;
+    margin: 0 auto;
+    border-top: 1px solid $color-box-border;
+    border-bottom: 1px solid $color-box-border;
+    display: flex; /* 子要素のdtとddを横並びにする */
+    flex-wrap: wrap; /* 1つのdtとddで1行になるよう改行させる */
+
+    dt, dd {
+      @include rem(15);
+      border-top: 1px solid $color-box-border;
+      border-bottom: 1px solid $color-box-border;
+      padding: 12px 0;
+      
+    }
+    dt {
+      width: 25%;
+    }
+    dd {
+      width: 75%;
+    }
+  }
+}
+

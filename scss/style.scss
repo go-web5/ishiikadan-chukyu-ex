@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+//*------------------*
+//*  変数 config
+//*------------------*
+
+@import "setting/config";
+
+//*------------------*
+//*  mixin
+//*------------------*
+
+@import "mixin/mixin";
+
+//*------------------*
+//*  base
+//*------------------*
+
+@import "base/base";
+
+//*------------------*
+//*  mojule
+//*------------------*
+
+// ヘッダー（トップページ）
+@import "module/header";
+
+// ヘッダー２（下層ページ）
+@import "module/header-2";
+
+// フッター
+@import "module/footer";
+
+// ボタン
+@import "module/button";
+
+//*------------------*
+//*  page
+//*------------------*
+
+// トップページ
+@import "page/front-page";
+
+// 下層ページ１
+@import "page/room";
+
+// 下層ページ２
+@import "page/eat";
+
+// 下層ページ3
+@import "page/spa";
+
+//*------------------*
+//*  responsive (mojule)
+//*------------------*
+
+// ヘッダー（トップページ）
+@import "responsive/header";
+
+// ヘッダー２（下層ページ）
+@import "responsive/header-2";
+
+// トップページ
+@import "responsive/front-page";
+
+// フッター
+@import "responsive/footer";
+
+//*------------------*
+//*  responsive (下層ページ)
+//*------------------*
+
+// お部屋
+@import "responsive/room";
+
+// お料理
+@import "responsive/eat";
+
+// 温泉
+@import "responsive/spa";
